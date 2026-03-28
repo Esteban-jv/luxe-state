@@ -44,9 +44,11 @@ export default async function Home({ searchParams }: HomeProps) {
               <span className="material-icons text-sm">arrow_forward</span>
             </a>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="flex flex-wrap justify-center gap-6">
             {featuredProperties.map((property) => (
-              <FeaturedCard key={property.id} property={property} />
+              <div key={property.id} className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] min-w-0">
+                <FeaturedCard property={property} />
+              </div>
             ))}
           </div>
         </section>

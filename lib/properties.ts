@@ -30,7 +30,7 @@ export async function getFeaturedProperties(): Promise<Property[]> {
     .select("*")
     .eq("is_featured", true)
     .order("created_at", { ascending: true })
-    .limit(2);
+    .limit(6);
 
   if (error) {
     console.error("Error fetching featured properties:", error.message);
