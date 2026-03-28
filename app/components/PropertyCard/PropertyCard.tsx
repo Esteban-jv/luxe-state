@@ -1,5 +1,5 @@
 import React from 'react';
-import type { Property } from '@/lib/mockData';
+import type { Property } from '@/lib/properties';
 
 export default function PropertyCard({ property }: { property: Property }) {
   // Determine badge background based on "FOR RENT" vs "FOR SALE"
@@ -25,7 +25,7 @@ export default function PropertyCard({ property }: { property: Property }) {
         <div className="flex justify-between items-baseline mb-2">
           <h3 className="font-bold text-lg text-nordic-dark dark:text-white">
             {property.price}
-            {property.priceSuffix && <span className="text-sm font-normal text-nordic-muted">{property.priceSuffix}</span>}
+            {property.price_suffix && <span className="text-sm font-normal text-nordic-muted">{property.price_suffix}</span>}
           </h3>
         </div>
         <h4 className="text-nordic-dark dark:text-gray-200 font-medium truncate mb-1">{property.title}</h4>

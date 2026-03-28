@@ -1,5 +1,5 @@
 import React from 'react';
-import type { Property } from '@/lib/mockData';
+import type { Property } from '@/lib/properties';
 
 export default function FeaturedCard({ property }: { property: Property }) {
   return (
