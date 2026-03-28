@@ -41,17 +41,11 @@ export default function Home() {
             </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {regularProperties.map((property, index) => {
-              let extraClasses = "";
-              if (index === 4) extraClasses = "hidden xl:block";
-              if (index === 5) extraClasses = "hidden lg:block";
-
-              return (
-                <div key={property.id} className={`${extraClasses} h-full`}>
-                  <PropertyCard property={property} />
-                </div>
-              );
-            })}
+            {regularProperties.map((property) => (
+              <div key={property.id} className="h-full">
+                <PropertyCard property={property} />
+              </div>
+            ))}
           </div>
           
           <div className="mt-12 text-center">
